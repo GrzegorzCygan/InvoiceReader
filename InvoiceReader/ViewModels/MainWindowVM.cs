@@ -158,7 +158,7 @@ namespace InvoiceReader.ViewModels
         /// Processing of matching files with records
         /// </summary>
         /// <param name="sender"></param>
-        private void ProcessFilesCommandExecute(object sender)
+        private void ProcessFilesCommandExecute(object _)
         {
             if (string.IsNullOrWhiteSpace(CSVFilePath))
             {

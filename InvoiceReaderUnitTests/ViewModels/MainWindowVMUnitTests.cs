@@ -35,10 +35,12 @@ namespace InvoiceReaderUnitTests.ViewModels
             string pdfPath1 = Path.Combine(path, "Faktura1.pdf");
             string pdfPath2 = Path.Combine(path, "Faktura2.pdf");
 
-            MainWindowVM vm = new MainWindowVM();
-            vm.CSVFilePath = csvPath;
-            vm.PDFFolderPath = path;
-            vm.Factory = new ProcessorFactory();
+            MainWindowVM vm = new MainWindowVM
+            {
+                CSVFilePath = csvPath,
+                PDFFolderPath = path,
+                Factory = new ProcessorFactory()
+            };
 
             vm.ProcessFilesCommand.Execute(null);
             Assert.AreEqual(2, vm.Matches.Count, "Should be 2 matched records");
