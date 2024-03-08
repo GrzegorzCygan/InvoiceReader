@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceReader", "InvoiceReader\InvoiceReader.csproj", "{BA5E8C55-6904-4A9A-8AE4-177B91295F20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceReaderUnitTests", "InvoiceReaderUnitTests\InvoiceReaderUnitTests.csproj", "{0937F404-BC49-47BD-8EB3-5B05274AF825}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA5E8C55-6904-4A9A-8AE4-177B91295F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA5E8C55-6904-4A9A-8AE4-177B91295F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA5E8C55-6904-4A9A-8AE4-177B91295F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA5E8C55-6904-4A9A-8AE4-177B91295F20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0937F404-BC49-47BD-8EB3-5B05274AF825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0937F404-BC49-47BD-8EB3-5B05274AF825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0937F404-BC49-47BD-8EB3-5B05274AF825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0937F404-BC49-47BD-8EB3-5B05274AF825}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1ABDE40D-3284-4C24-891A-8BD91962CD6A}
+	EndGlobalSection
+EndGlobal
