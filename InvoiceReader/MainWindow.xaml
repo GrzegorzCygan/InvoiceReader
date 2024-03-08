@@ -34,19 +34,17 @@
         <Button Grid.Row="1" Grid.Column="0" Margin="0,10,0,0" Height="23" Content="Select PDF files folder" Command="{Binding SelectPDFFolderPathCommand}"/>
         <Label Grid.Row="1" Grid.Column="1" Margin="10,10,0,0" Content="{Binding PDFFolderPath}"/>
         <Button Grid.Row="2" Grid.Column="0" Margin="0,10,0,0" Height="23" VerticalAlignment="Top" Content="Process" Command="{Binding ProcessFilesCommand}" CommandParameter="{Binding ElementName=MainWindow}"/>
-        <!--<StackPanel Orientation="Vertical" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,10,0,0">-->
-            <ListView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Height="100" Margin="0,10,0,0" ItemsSource="{Binding Matches}" SelectionChanged="ListView_SelectionChanged" SelectedItem="{Binding SelectedItem}">
-                <ListView.Resources>
-                    <DataTemplate DataType="{x:Type processor:RecordMatch}">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding Record}"/>
-                            <TextBlock Text=" "/>
-                            <TextBlock Text="{Binding PdfPath}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.Resources>
-            </ListView>
-        <syncfusion:PdfViewerControl Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,10" x:Name="pdfViewer"/>
-        <!--</StackPanel>-->
+        <ListView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Height="90" Margin="0,10,0,0" ItemsSource="{Binding Matches}" SelectionChanged="ListView_SelectionChanged" SelectedItem="{Binding SelectedItem}">
+            <ListView.Resources>
+                <DataTemplate DataType="{x:Type processor:RecordMatch}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Record}"/>
+                        <TextBlock Text=" "/>
+                        <TextBlock Text="{Binding PdfPath}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.Resources>
+        </ListView>
+        <syncfusion:PdfViewerControl Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,10,0,10" x:Name="pdfViewer"/>
     </Grid>
 </Window>
