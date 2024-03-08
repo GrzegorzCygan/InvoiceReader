@@ -142,6 +142,7 @@ namespace InvoiceReader.ViewModels
                 System.Windows.Forms.FolderBrowserDialog dlg = new System.Windows.Forms.FolderBrowserDialog()
                 {
                     Description = "Select folder with PDF files",
+                    SelectedPath = PDFFolderPath
                 };
                 if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
@@ -171,7 +172,6 @@ namespace InvoiceReader.ViewModels
             }
             try
             {
-                Matches = new ObservableCollection<RecordMatch>();
                 IPdfProcessor processor = new PdfProcessor(Factory, CSVFilePath, PDFFolderPath);
                 List<RecordMatch> matches = processor.GetMatches();
                 Matches = new ObservableCollection<RecordMatch>(matches);

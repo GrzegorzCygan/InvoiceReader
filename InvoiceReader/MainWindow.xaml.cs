@@ -37,10 +37,24 @@ namespace InvoiceReader
         /// <param name="e"></param>
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (this.DataContext is MainWindowVM model)
+            try
             {
-                pdfViewer.Load(model.SelectedItem.PdfPath);
-                pdfViewer.ZoomTo(75);
+                if (this.DataContext is MainWindowVM model && model.SelectedItem != null)
+                {
+                    if (string.IsNullOrWhiteSpace(model.SelectedItem.PdfPath))
+                    {
+                        pdfViewer.Unload();
+                    }
+                    else
+                    {
+                        pdfViewer.Load(model.SelectedItem.PdfPath);
+                        pdfViewer.ZoomTo(75);
+                    }
+                }
+            }
+            catch (Exception ex) 
+            { 
+                MessageBox.Show(ex.Message, "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);            
             }
         }
     }
